@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MQT_MultiLengthSlopes – NinjaTrader 8 Indicator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Segoe UI, Tahoma, sans-serif;
+  background:#0a0a0a;
+  color:#e0e0e0;
+  line-height:1.6;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{
+  background:#000;
+  border-bottom:2px solid #00ff00;
+  padding:16px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.brand img{height:46px}
+.brand h1{
+  color:#00ff00;
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+/* Hero */
+.hero{
+  padding:80px 0;
+  text-align:center;
+  background:linear-gradient(135deg,#000,#1a1a1a);
+  border-bottom:3px solid #00ff00;
+}
+.hero h2{
+  color:#00ff00;
+  font-size:2.6rem;
+  margin-bottom:18px;
+}
+.hero p{
+  max-width:1000px;
+  margin:0 auto 30px;
+  font-size:1.15rem;
+  color:#b0b0b0;
+}
+.cta-button{
+  display:inline-block;
+  background:#00ff00;
+  color:#000;
+  padding:14px 38px;
+  font-weight:800;
+  border-radius:5px;
+  text-decoration:none;
+  border:2px solid #00ff00;
+  transition:.25s;
+}
+.cta-button:hover{
+  background:#000;
+  color:#00ff00;
+  box-shadow:0 0 18px rgba(0,255,0,.4);
+}
+
+/* Section titles */
+.section-title{
+  text-align:center;
+  color:#00ff00;
+  font-size:2.2rem;
+  margin-bottom:50px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+/* Features */
+.features{padding:60px 0;background:#0f0f0f}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.feature-card{
+  background:#1a1a1a;
+  border:1px solid #333;
+  border-radius:8px;
+  padding:28px;
+  transition:.25s;
+}
+.feature-card:hover{
+  border-color:#00ff00;
+  transform:translateY(-5px);
+}
+.feature-card h3{color:#00ff00;margin-bottom:12px}
+.feature-card p{color:#b0b0b0}
+
+/* Screenshots */
+.screenshots{padding:60px 0;background:#000}
+.screenshot-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:30px;
+}
+.screenshot-item{
+  background:#1a1a1a;
+  border:1px solid #333;
+  border-radius:8px;
+  padding:18px;
+}
+.screenshot-item img{
+  width:100%;
+  border-radius:6px;
+  margin-bottom:12px;
+}
+.screenshot-item h3{text-align:center;color:#00ff00}
+.screenshot-item p{text-align:center;color:#9a9a9a;font-size:.95rem}
+
+/* How it works */
+.how-it-works{padding:60px 0;background:#0f0f0f}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.step{
+  background:#1a1a1a;
+  padding:28px;
+  border-left:4px solid #00ff00;
+  border-radius:8px;
+}
+.step-number{
+  width:40px;height:40px;
+  background:#00ff00;color:#000;
+  border-radius:50%;
+  text-align:center;
+  line-height:40px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.step h3{color:#00ff00;margin-bottom:8px}
+.step p{color:#b0b0b0}
+
+/* Settings */
+.settings{padding:60px 0;background:#000}
+.settings-table{
+  width:100%;
+  border-collapse:collapse;
+  background:#1a1a1a;
+}
+.settings-table th{
+  background:#00ff00;
+  color:#000;
+  padding:14px;
+  text-align:left;
+}
+.settings-table td{
+  padding:14px;
+  border-bottom:1px solid #333;
+  color:#b0b0b0;
+}
+
+/* FAQ */
+.faq{padding:60px 0;background:#0f0f0f}
+.faq-item{
+  background:#1a1a1a;
+  border-left:4px solid #00ff00;
+  border-radius:8px;
+  padding:24px;
+  margin-bottom:20px;
+}
+.faq-item h3{color:#00ff00;margin-bottom:10px}
+.faq-item p{color:#b0b0b0}
+
+/* Footer */
+footer{
+  background:#000;
+  border-top:2px solid #00ff00;
+  padding:30px 0;
+  text-align:center;
+}
+footer p{color:#666}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="brand">
+      <img src="https://cdn.abacus.ai/images/c5cbad98-be42-441e-b4f1-305bf6075e31.png">
+      <h1>MQT_MultiLengthSlopes</h1>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Precision Slope Analysis Across Multiple Bar Lengths</h2>
+    <p>
+      MQT_MultiLengthSlopes displays real‑time slope angles (in degrees) for both
+      High and Low prices, with optional multi‑bar slope comparisons, automatic
+      color coding, flat‑slope filtering, and CSV export for advanced analysis.
+    </p>
+    <a class="cta-button" href="#" onclick="alert('Add checkout URL');return false;">Download Now</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">Key Features</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>High & Low Slope Degrees</h3>
+        <p>Displays precise slope angles for both High and Low price movement on each bar.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Multi‑Bar Slope Comparison</h3>
+        <p>Calculate slopes between any two historical bars for deeper structural analysis.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Automatic Direction Coloring</h3>
+        <p>Green for positive slope, red for negative slope — instantly readable.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Flat‑Slope Filtering</h3>
+        <p>Automatically hide near‑flat slopes using a configurable degree threshold.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Text & Line Control</h3>
+        <p>Independently toggle degree labels and slope lines for a clean chart.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>CSV Export</h3>
+        <p>Export slope data (High, Low, additional slopes) for spreadsheet or research use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="screenshots">
+  <div class="container">
+    <h2 class="section-title">Chart Examples</h2>
+
+    <div class="screenshot-grid">
+      <div class="screenshot-item">
+        <img src="https://cdn.abacus.ai/images/3bc80bfb-e6ad-4bb9-8516-ec3f9fe3926b.png">
+        <h3>Single‑Bar High & Low Slopes</h3>
+        <p>Degree labels plotted directly above and below price</p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="https://cdn.abacus.ai/images/b8444ad3-4e54-4177-946a-6a34b101ba04.png">
+        <h3>Multi‑Length Slope Lines</h3>
+        <p>Custom bar‑to‑bar slope visualization across time</p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="https://cdn.abacus.ai/images/3f9cc1ff-3e3b-4f80-ad6b-08cc621af5fc.png">
+        <h3>Trend Structure Analysis</h3>
+        <p>Combined slope degrees and connecting lines reveal momentum shifts</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Calculate Slopes</h3>
+        <p>High and Low price changes are converted into slope degrees using tick size.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Apply Filters</h3>
+        <p>Flat slopes are optionally hidden to reduce noise.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Draw Labels & Lines</h3>
+        <p>Text labels and slope lines are plotted based on user settings.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Export Data</h3>
+        <p>Optional CSV export captures slope values for offline analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+
+    <div class="faq-item">
+      <h3>Does this repaint?</h3>
+      <p>No. Slopes are calculated using completed bars.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I limit slopes to the current bar?</h3>
+      <p>Yes. Enable “Only Current Bar” to show slopes only on the most recent bar.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I compare arbitrary bars?</h3>
+      <p>Yes. Additional slopes allow you to specify any two bar offsets.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Where is the CSV saved?</h3>
+      <p>Documents → NinjaTrader 8 → export</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 myQuantrader.com — All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
